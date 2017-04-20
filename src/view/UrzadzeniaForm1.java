@@ -29,11 +29,6 @@ public class UrzadzeniaForm1 extends javax.swing.JFrame {
 
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        entityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("jdbc:oracle:thin:@10.132.205.107:1521:gugikPU").createEntityManager();
-        pomiarTemperaturaQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT p FROM PomiarTemperatura p");
-        pomiarTemperaturaList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : pomiarTemperaturaQuery.getResultList();
-        pomiarTemperaturaQuery1 = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT p FROM PomiarTemperatura p");
-        pomiarTemperaturaList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : pomiarTemperaturaQuery1.getResultList();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -190,12 +185,13 @@ public class UrzadzeniaForm1 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton6)
-                        .addComponent(jButton5)))
+                        .addComponent(jButton5))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton1)
+                        .addComponent(jButton2)))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
@@ -260,7 +256,6 @@ public class UrzadzeniaForm1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.persistence.EntityManager entityManager;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -275,10 +270,6 @@ public class UrzadzeniaForm1 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private java.util.List<view.PomiarTemperatura> pomiarTemperaturaList;
-    private java.util.List<view.PomiarTemperatura> pomiarTemperaturaList1;
-    private javax.persistence.Query pomiarTemperaturaQuery;
-    private javax.persistence.Query pomiarTemperaturaQuery1;
     // End of variables declaration//GEN-END:variables
 
 //    Object[][] data = {{"false", false},
